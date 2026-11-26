@@ -468,7 +468,7 @@
               <div id="car-showcase-slot" class="relative h-[340px] sm:h-[390px] bg-black overflow-hidden flex flex-col items-center justify-center">
                 <img
                   id="hero-car-img"
-                  src="./powergrip-front-view.jpg"
+                  src="./Captura de ecrã 2026-11-23 151925.jpg"
                   alt="Power Grip Race Car — 3/4 Front View"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   onerror="handleCarRenderFallback(this, 'threeQuarter')"
@@ -497,39 +497,59 @@
             </div>
           </div>
 
-          <!-- Two official 3D render views -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div onclick="setHeroCarView('threeQuarter'); document.getElementById('car-showcase-slot').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="cursor-pointer group relative rounded-xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all h-64 sm:h-80 bg-black">
+          <!-- 3-Column 3D Render Showcase (Direct Uploaded Car Photos) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Render Card 1: 3/4 Front View -->
+            <div onclick="setHeroCarView('threeQuarter'); document.getElementById('car-showcase-slot').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="cursor-pointer group relative rounded-xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all h-64 bg-black flex flex-col justify-between">
               <img
                 id="gallery-car-3-4"
-                src="./powergrip-front-view.jpg"
-                alt="Power Grip car — front three-quarter render"
-                loading="lazy"
+                src="front view.png"
+                alt="Power Grip Car — 3/4 View"
                 class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                onerror="handleCarRenderFallback(this, 'threeQuarter')"
               />
-              <div class="absolute inset-x-0 top-0 p-5 bg-gradient-to-b from-obsidian/85 to-transparent">
-                <span class="font-mono text-[11px] text-gold tracking-widest uppercase">01 // FRONT THREE-QUARTER VIEW</span>
+              <div class="relative z-10 p-5 bg-gradient-to-b from-obsidian/85 via-obsidian/30 to-transparent">
+                <span class="font-mono text-[11px] text-gold tracking-widest uppercase">3/4 front view></logo></span>
               </div>
-              <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-obsidian via-obsidian/75 to-transparent">
-                <p class="font-display font-semibold text-white text-lg">Front Aero & Chassis Design</p>
-                <p class="text-xs text-zinc-300 mt-0.5">Crimson bodywork with silver aerodynamic elements</p>
+              <div class="relative z-10 p-5 bg-gradient-to-t from-obsidian via-obsidian/85 to-transparent">
+                <p class="font-display font-semibold text-white text-lg">Front Wing & Aero Profile</p>
+                <p class="text-xs text-zinc-300 mt-0.5">Crimson chassis with grey/silver front aero planes on track</p>
               </div>
             </div>
 
-            <div onclick="setHeroCarView('side'); document.getElementById('car-showcase-slot').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="cursor-pointer group relative rounded-xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all h-64 sm:h-80 bg-black">
+            <!-- Render Card 2: Side View -->
+            <div onclick="setHeroCarView('side'); document.getElementById('car-showcase-slot').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="cursor-pointer group relative rounded-xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all h-64 bg-black flex flex-col justify-between">
               <img
                 id="gallery-car-side"
-                src="./powergrip-side-view.jpg"
-                alt="Power Grip car — side profile render"
-                loading="lazy"
+                src="side view.png"
+                alt="Power Grip Car — Side View"
                 class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                onerror="handleCarRenderFallback(this, 'side')"
               />
-              <div class="absolute inset-x-0 top-0 p-5 bg-gradient-to-b from-obsidian/85 to-transparent">
-                <span class="font-mono text-[11px] text-gold tracking-widest uppercase">02 // SIDE PROFILE</span>
+              <div class="relative z-10 p-5 bg-gradient-to-b from-obsidian/85 via-obsidian/30 to-transparent">
+                <span class="font-mono text-[11px] text-gold tracking-widest uppercase">02 // VISTA LATERAL</span>
               </div>
-              <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-obsidian via-obsidian/75 to-transparent">
-                <p class="font-display font-semibold text-white text-lg">Side Profile & Bodywork</p>
-                <p class="text-xs text-zinc-300 mt-0.5">Full-length view of the crimson chassis and wheel layout</p>
+              <div class="relative z-10 p-5 bg-gradient-to-t from-obsidian via-obsidian/85 to-transparent">
+                <p class="font-display font-semibold text-white text-lg">Side Profile & Overhead Bay Lighting</p>
+                <p class="text-xs text-zinc-300 mt-0.5">Full side silhouette with polygonal ceiling lights</p>
+              </div>
+            </div>
+
+            <!-- Render Card 3: Rear View -->
+            <div onclick="setHeroCarView('rear'); document.getElementById('car-showcase-slot').scrollIntoView({ behavior: 'smooth', block: 'center' });" class="cursor-pointer group relative rounded-xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all h-64 bg-black flex flex-col justify-between">
+              <img
+                id="gallery-car-rear"
+                src="rear view.png"
+                alt="Power Grip Car — Rear View"
+                class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                onerror="handleCarRenderFallback(this, 'rear')"
+              />
+              <div class="relative z-10 p-5 bg-gradient-to-b from-obsidian/85 via-obsidian/30 to-transparent">
+                <span class="font-mono text-[11px] text-gold tracking-widest uppercase">03 // VISTA TRASEIRA</span>
+              </div>
+              <div class="relative z-10 p-5 bg-gradient-to-t from-obsidian via-obsidian/85 to-transparent">
+                <p class="font-display font-semibold text-white text-lg">Rear Shroud & Track Alignment</p>
+                <p class="text-xs text-zinc-300 mt-0.5">Circular grey rear ring-wing/diffuser centered on lane</p>
               </div>
             </div>
           </div>
@@ -1025,7 +1045,7 @@
           <div class="space-y-10">
             <!-- TITLE PARTNER -->
             <div>
-              <div class="flex items-center gap-4 mb-5"><h3 class="font-display font-bold text-xl text-gold">TITLE PARTNER</h3><div class="h-px flex-1 bg-gold/25"></div></div>
+              <div class="flex items-center gap-4 mb-5"><h3 class="font-display font-bold text-xl text-gold">Powerful</h3><div class="h-px flex-1 bg-gold/25"></div></div>
               <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div class="pg-card min-h-36 rounded-xl p-4 flex flex-col items-center justify-center text-center border border-gold/30"><div class="w-full h-20 flex items-center justify-center border border-dashed border-gold/30 rounded-lg text-zinc-600 font-mono text-[10px] tracking-[0.2em]">ADD LOGO</div><p class="font-display text-xs text-zinc-400 mt-3">SPONSOR NAME</p></div>
               </div>
@@ -1100,7 +1120,7 @@
               </thead>
               <tbody class="text-sm text-zinc-300">
                 <tr class="border-b border-white/10 bg-gold/[0.035]">
-                  <td class="px-4 py-5 font-display font-semibold text-gold">Title Partner</td><td class="px-4 py-5 font-semibold text-white">250€</td>
+                  <td class="px-4 py-5 font-display font-semibold text-gold">Powerful</td><td class="px-4 py-5 font-semibold text-white">250€</td>
                   <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Main highlight</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td>
                 </tr>
                 <tr class="border-b border-white/10">
@@ -1465,14 +1485,14 @@ POWERGRIPTEAM
       logoFallback: './assets/logo-powergrip.png',
       carViews: {
         threeQuarter: {
-          src: './powergrip-front-view.jpg',
+          src: './front view.png',
           galleryId: 'gallery-car-3-4',
           badge: '3D RENDER // 3/4 FRONT VIEW',
           caption: 'Front wings, crimson bodywork & silver/grey aero elements on track',
           alt: 'Power Grip Race Car — 3/4 Front View'
         },
         side: {
-          src: './powergrip-side-view.jpg',
+          src: './Captura de ecrã 2026-11-23 151935.jpg',
           galleryId: 'gallery-car-side',
           badge: '3D RENDER // SIDE PROFILE',
           caption: 'Side profile with crimson chassis, grey accents & hexagonal ceiling lights',
