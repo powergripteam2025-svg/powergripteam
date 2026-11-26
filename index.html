@@ -187,6 +187,134 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #D4AF37;
     }
+
+
+    /* ================================================================
+       MOBILE RESPONSIVE REFINEMENT — POWER GRIP TEAM
+       ================================================================ */
+    html { scroll-padding-top: 5.5rem; }
+    section[id] { scroll-margin-top: 5.5rem; }
+    img { max-width: 100%; }
+    button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+    button, a { touch-action: manipulation; }
+    input, select, textarea { font-size: 16px; }
+
+    @media (max-width: 1023px) {
+      #navbar .h-20 { height: 4.25rem; }
+      #mobile-menu {
+        max-height: calc(100dvh - 4.25rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+    }
+
+    @media (max-width: 767px) {
+      body { overflow-x: clip; }
+      header { padding-top: env(safe-area-inset-top); }
+      #navbar .max-w-7xl { padding-left: 1rem; padding-right: 1rem; }
+      #navbar a[aria-label="Power Grip Team Home"] { gap: .65rem; }
+      #navbar a[aria-label="Power Grip Team Home"] > div:first-child {
+        width: 4.15rem; height: 2.65rem;
+      }
+      #mobile-menu { padding-left: 1.25rem; padding-right: 1.25rem; }
+      #mobile-menu .mobile-nav-link { min-height: 2.9rem; display: flex; align-items: center; }
+
+      main section { padding-top: 4rem; padding-bottom: 4rem; }
+      #home {
+        min-height: auto;
+        padding-top: 6.5rem;
+        padding-bottom: 3.5rem;
+      }
+      #home > .max-w-7xl { padding-left: 1rem; padding-right: 1rem; }
+      #home .mb-10 { margin-bottom: 2rem; }
+      #home .grid { gap: 2rem; }
+      #home h1 {
+        font-size: clamp(2.05rem, 9vw, 3.25rem);
+        line-height: 1.04;
+        letter-spacing: -.045em;
+        overflow-wrap: anywhere;
+      }
+      #home .text-base { font-size: .98rem; }
+      #home .text-lg { font-size: 1.05rem; }
+      #home .tracking-\[0\.2em\] { letter-spacing: .12em; }
+      #home .inline-flex.items-center.justify-center.w-56 {
+        width: min(13rem, 75vw);
+        height: 6.25rem;
+      }
+      #home .flex.flex-wrap.items-center.gap-3\.5.pt-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+      #home .flex.flex-wrap.items-center.gap-3\.5.pt-2 a {
+        width: 100%;
+        justify-content: center;
+        min-height: 3rem;
+      }
+      #car-showcase-slot { height: clamp(13rem, 68vw, 21rem); }
+      #hero-view-badge { font-size: 9px; letter-spacing: .08em; }
+      .car-view-btn { padding: .45rem .5rem; font-size: 9px; }
+      #home .mt-20 { margin-top: 3.25rem; }
+      #home .grid.grid-cols-1.md\:grid-cols-3 { gap: 1rem; }
+      #home .h-64 { height: 13.5rem; }
+      #home .pg-card { padding: 1.1rem; }
+
+      #about-us, #the-team, #merch, #partners, #contact {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      #about-us .mb-20 { margin-bottom: 3rem; }
+      #about-us .grid.grid-cols-3 { gap: .5rem; }
+      #about-us .grid.grid-cols-3 > div { min-width: 0; }
+      #about-us .grid.grid-cols-3 .text-3xl { font-size: 1.45rem; }
+      #about-us .grid.grid-cols-3 span { overflow-wrap: anywhere; }
+
+      #the-team .grid, #merch .grid { gap: 1rem; }
+      #the-team article .h-72 { height: 15rem; }
+      #merch .pg-card { min-width: 0; }
+      #merch button { min-height: 2.8rem; }
+
+      #partners .grid.grid-cols-2 { gap: .65rem; }
+      #partners .pg-card { padding: .65rem; min-height: 7.5rem; }
+      #partners .pg-card > div { height: 4rem; font-size: 9px; }
+      #partners .pg-card p { font-size: 10px; overflow-wrap: anywhere; }
+      #partners .overflow-x-auto { -webkit-overflow-scrolling: touch; }
+      #partners table { min-width: 42rem; }
+
+      #contact .grid { gap: 2rem; }
+      #contact input, #contact select, #contact textarea {
+        width: 100%;
+        min-height: 2.9rem;
+      }
+      #contact textarea { min-height: 8rem; }
+
+      footer .max-w-7xl { padding-left: 1rem; padding-right: 1rem; }
+      #merch-modal > div { width: calc(100% - 1.5rem); max-height: 88dvh; overflow-y: auto; }
+
+      .reveal { transform: translateY(12px); transition-duration: .45s; }
+      .pg-card:hover { transform: none; }
+    }
+
+    @media (max-width: 380px) {
+      #home .font-mono.text-\[11px\] { font-size: 9px; }
+      #home h1 { font-size: 2rem; }
+      #home .rounded-2xl { border-radius: .85rem; }
+      #hero-view-badge { max-width: 100%; }
+      #home .car-view-btn { font-size: 8px; padding: .4rem .38rem; }
+      #about-us .grid.grid-cols-3 .text-3xl { font-size: 1.25rem; }
+      #partners .grid.grid-cols-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto !important; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
   </style>
 </head>
 <body class="selection:bg-gold selection:text-obsidian">
@@ -917,7 +1045,7 @@
           <div class="space-y-10">
             <!-- TITLE PARTNER -->
             <div>
-              <div class="flex items-center gap-4 mb-5"><h3 class="font-display font-bold text-xl text-gold">TITLE PARTNER</h3><div class="h-px flex-1 bg-gold/25"></div></div>
+              <div class="flex items-center gap-4 mb-5"><h3 class="font-display font-bold text-xl text-gold">Powerful</h3><div class="h-px flex-1 bg-gold/25"></div></div>
               <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div class="pg-card min-h-36 rounded-xl p-4 flex flex-col items-center justify-center text-center border border-gold/30"><div class="w-full h-20 flex items-center justify-center border border-dashed border-gold/30 rounded-lg text-zinc-600 font-mono text-[10px] tracking-[0.2em]">ADD LOGO</div><p class="font-display text-xs text-zinc-400 mt-3">SPONSOR NAME</p></div>
               </div>
@@ -965,33 +1093,110 @@
           </div>
         </div>
 
-        <!-- SPONSORSHIP PROPOSAL TABLE: FILL IN THE VALUES AND BENEFITS -->
+        <!-- SPONSORSHIP PROPOSAL: OFFICIAL CONTRIBUTIONS & BENEFITS -->
         <div class="reveal">
           <div class="flex items-center gap-4 mb-6">
             <span class="font-mono text-xs tracking-[0.22em] text-gold uppercase">SPONSORSHIP PROPOSAL</span>
             <div class="h-px flex-1 bg-gold/25"></div>
           </div>
           <p class="text-sm text-zinc-400 leading-relaxed max-w-3xl mb-6">
-                      </p>
-          <div class="overflow-x-auto rounded-xl border border-white/10">
-            <table class="w-full min-w-[760px] text-left border-collapse">
+            Partnership levels and benefits are structured according to the minimum contribution. Higher levels receive greater brand visibility across the team's communication, events and equipment.
+          </p>
+
+          <!-- Desktop / tablet comparison table -->
+          <div class="hidden md:block overflow-x-auto rounded-xl border border-white/10">
+            <table class="w-full min-w-[1050px] text-left border-collapse">
               <thead class="bg-white/[0.04]">
-                <tr class="font-mono text-[10px] tracking-[0.16em] text-gold uppercase">
-                  <th class="px-5 py-4 border-b border-white/10">Category</th>
-                  <th class="px-5 py-4 border-b border-white/10">Contribution</th>
-                  <th class="px-5 py-4 border-b border-white/10">Brand visibility</th>
-                  <th class="px-5 py-4 border-b border-white/10">Benefits / Notes</th>
+                <tr class="font-mono text-[10px] tracking-[0.13em] text-gold uppercase">
+                  <th class="px-4 py-4 border-b border-white/10">Category</th>
+                  <th class="px-4 py-4 border-b border-white/10">Minimum contribution</th>
+                  <th class="px-4 py-4 border-b border-white/10">Website</th>
+                  <th class="px-4 py-4 border-b border-white/10">School events</th>
+                  <th class="px-4 py-4 border-b border-white/10">Social media</th>
+                  <th class="px-4 py-4 border-b border-white/10">Stand logo</th>
+                  <th class="px-4 py-4 border-b border-white/10">Uniform</th>
+                  <th class="px-4 py-4 border-b border-white/10">Bottles</th>
                 </tr>
               </thead>
               <tbody class="text-sm text-zinc-300">
-                <tr class="border-b border-white/10"><td class="px-5 py-5 font-display font-semibold text-white">Title Partner</td><td class="px-5 py-5 text-zinc-600">[Add value]</td><td class="px-5 py-5 text-zinc-600">[Add placements]</td><td class="px-5 py-5 text-zinc-600">[Add benefits]</td></tr>
-                <tr class="border-b border-white/10"><td class="px-5 py-5 font-display font-semibold text-white">Platinum</td><td class="px-5 py-5 text-zinc-600">[Add value]</td><td class="px-5 py-5 text-zinc-600">[Add placements]</td><td class="px-5 py-5 text-zinc-600">[Add benefits]</td></tr>
-                <tr class="border-b border-white/10"><td class="px-5 py-5 font-display font-semibold text-white">Gold</td><td class="px-5 py-5 text-zinc-600">[Add value]</td><td class="px-5 py-5 text-zinc-600">[Add placements]</td><td class="px-5 py-5 text-zinc-600">[Add benefits]</td></tr>
-                <tr class="border-b border-white/10"><td class="px-5 py-5 font-display font-semibold text-white">Silver</td><td class="px-5 py-5 text-zinc-600">[Add value]</td><td class="px-5 py-5 text-zinc-600">[Add placements]</td><td class="px-5 py-5 text-zinc-600">[Add benefits]</td></tr>
-                <tr class="border-b border-white/10"><td class="px-5 py-5 font-display font-semibold text-white">Bronze</td><td class="px-5 py-5 text-zinc-600">[Add value]</td><td class="px-5 py-5 text-zinc-600">[Add placements]</td><td class="px-5 py-5 text-zinc-600">[Add benefits]</td></tr>
+                <tr class="border-b border-white/10 bg-gold/[0.035]">
+                  <td class="px-4 py-5 font-display font-semibold text-gold">Powerful</td><td class="px-4 py-5 font-semibold text-white">250€</td>
+                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Main highlight</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="px-4 py-5 font-display font-semibold text-white">Platinum</td><td class="px-4 py-5 font-semibold text-white">150€</td>
+                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Highlight</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="px-4 py-5 font-display font-semibold text-white">Gold</td><td class="px-4 py-5 font-semibold text-white">100€</td>
+                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-300 font-mono text-[10px] tracking-wider uppercase">Medium</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-400 font-mono text-[10px] tracking-wider uppercase">Minimal</span></td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="px-4 py-5 font-display font-semibold text-white">Silver</td><td class="px-4 py-5 font-semibold text-white">50€</td>
+                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5">Specific situations</td><td class="px-4 py-5"><span class="text-zinc-400 font-mono text-[10px] tracking-wider uppercase">Minimal</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-5 font-display font-semibold text-white">Bronze</td><td class="px-4 py-5 font-semibold text-white">25€</td>
+                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5">Specific situations</td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td>
+                </tr>
               </tbody>
             </table>
           </div>
+
+          <!-- Mobile-friendly sponsorship cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:hidden">
+            <article class="pg-card rounded-xl p-4 border border-gold/40">
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div><p class="font-mono text-[10px] tracking-[0.18em] text-gold uppercase">01 / Highest tier</p><h3 class="font-display font-bold text-lg text-gold mt-1">Title Partner</h3></div>
+                <p class="font-display font-bold text-xl text-white whitespace-nowrap">250€</p>
+              </div>
+              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
+              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
+                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
+                <p>Social media <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Stand <span class="text-gold text-[10px] uppercase tracking-wide">Main</span></p>
+                <p>Uniform <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Bottles <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
+              </div>
+            </article>
+            <article class="pg-card rounded-xl p-4">
+              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">02 / Premium</p><h3 class="font-display font-bold text-lg text-white mt-1">Platinum</h3></div><p class="font-display font-bold text-xl text-white">150€</p></div>
+              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
+              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
+                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
+                <p>Social media <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Stand <span class="text-gold text-[10px] uppercase tracking-wide">Highlight</span></p>
+                <p>Uniform <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Bottles <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
+              </div>
+            </article>
+            <article class="pg-card rounded-xl p-4">
+              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">03 / Partner</p><h3 class="font-display font-bold text-lg text-white mt-1">Gold</h3></div><p class="font-display font-bold text-xl text-white">100€</p></div>
+              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
+              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
+                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
+                <p>Social media <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Stand <span class="text-zinc-300 text-[10px] uppercase tracking-wide">Medium</span></p>
+                <p>Uniform <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Bottles <span class="text-zinc-400 text-[10px] uppercase tracking-wide">Minimal</span></p>
+              </div>
+            </article>
+            <article class="pg-card rounded-xl p-4">
+              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">04 / Supporter</p><h3 class="font-display font-bold text-lg text-white mt-1">Silver</h3></div><p class="font-display font-bold text-xl text-white">50€</p></div>
+              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
+              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
+                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
+                <p>Social media <span class="text-zinc-400 text-[10px] uppercase tracking-wide">By arrangement</span></p><p>Stand <span class="text-zinc-400 text-[10px] uppercase tracking-wide">Minimal</span></p>
+                <p>Uniform <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p><p>Bottles <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
+              </div>
+            </article>
+            <article class="pg-card rounded-xl p-4">
+              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">05 / Supporter</p><h3 class="font-display font-bold text-lg text-white mt-1">Bronze</h3></div><p class="font-display font-bold text-xl text-white">25€</p></div>
+              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
+              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
+                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
+                <p>Social media <span class="text-zinc-400 text-[10px] uppercase tracking-wide">By arrangement</span></p><p>Stand <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
+                <p>Uniform <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p><p>Bottles <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
+              </div>
+            </article>
+          </div>
+          <p class="text-[11px] text-zinc-500 mt-4 leading-relaxed">
+            Social media visibility for Silver and Bronze partners is provided only in specific situations. Benefits and placements are subject to the team's communication and event planning.
+          </p>
         </div>
       </div>
     </section>
@@ -1209,20 +1414,30 @@ POWERGRIPTEAM
     const iconMenu = document.getElementById('icon-menu');
     const iconClose = document.getElementById('icon-close');
 
+    function setMobileMenu(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      iconMenu.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+      mobileMenuBtn.setAttribute('aria-expanded', String(open));
+      mobileMenuBtn.setAttribute('aria-label', open ? 'Close Menu' : 'Open Menu');
+      document.body.classList.toggle('mobile-menu-open', open);
+    }
+
     mobileMenuBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden');
-      iconMenu.classList.toggle('hidden', !isHidden);
-      iconClose.classList.toggle('hidden', isHidden);
+      setMobileMenu(mobileMenu.classList.contains('hidden'));
     });
 
-    // Close mobile menu when clicking a navigation link
+    // Close the mobile navigation after selecting a section.
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        iconMenu.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-      });
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    // Escape closes the menu and desktop resize resets its state.
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') setMobileMenu(false);
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) setMobileMenu(false);
     });
 
     // Active Navigation Highlight on Scroll
