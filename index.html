@@ -1093,112 +1093,139 @@
         </div>
 
         <!-- SPONSORSHIP PROPOSAL: OFFICIAL CONTRIBUTIONS & BENEFITS -->
-        <div class="reveal">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="font-mono text-xs tracking-[0.22em] text-gold uppercase">SPONSORSHIP PROPOSAL</span>
-            <div class="h-px flex-1 bg-gold/25"></div>
-          </div>
-          <p class="text-sm text-zinc-400 leading-relaxed max-w-3xl mb-6">
-            Partnership levels and benefits are structured according to the minimum contribution. Higher levels receive greater brand visibility across the team's communication, events and equipment.
-          </p>
+        
+<style>
+  /* Sponsorship table scrollbar */
+  .sponsorship-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #b89b55 transparent;
+  }
 
-          <!-- Desktop / tablet comparison table -->
-          <div class="hidden md:block overflow-x-auto rounded-xl border border-white/10">
-            <table class="w-full min-w-[1050px] text-left border-collapse">
-              <thead class="bg-white/[0.04]">
-                <tr class="font-mono text-[10px] tracking-[0.13em] text-gold uppercase">
-                  <th class="px-4 py-4 border-b border-white/10">Category</th>
-                  <th class="px-4 py-4 border-b border-white/10">Minimum contribution</th>
-                  <th class="px-4 py-4 border-b border-white/10">Website</th>
-                  <th class="px-4 py-4 border-b border-white/10">School events</th>
-                  <th class="px-4 py-4 border-b border-white/10">Social media</th>
-                  <th class="px-4 py-4 border-b border-white/10">Stand logo</th>
-                  <th class="px-4 py-4 border-b border-white/10">Uniform</th>
-                  <th class="px-4 py-4 border-b border-white/10">Bottles</th>
-                </tr>
-              </thead>
-              <tbody class="text-sm text-zinc-300">
-                <tr class="border-b border-white/10 bg-gold/[0.035]">
-                  <td class="px-4 py-5 font-display font-semibold text-gold">Powerful</td><td class="px-4 py-5 font-semibold text-white">250€</td>
-                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Main highlight</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td>
-                </tr>
-                <tr class="border-b border-white/10">
-                  <td class="px-4 py-5 font-display font-semibold text-white">Platinum</td><td class="px-4 py-5 font-semibold text-white">150€</td>
-                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Highlight</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td>
-                </tr>
-                <tr class="border-b border-white/10">
-                  <td class="px-4 py-5 font-display font-semibold text-white">Gold</td><td class="px-4 py-5 font-semibold text-white">100€</td>
-                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-300 font-mono text-[10px] tracking-wider uppercase">Medium</span></td><td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-400 font-mono text-[10px] tracking-wider uppercase">Minimal</span></td>
-                </tr>
-                <tr class="border-b border-white/10">
-                  <td class="px-4 py-5 font-display font-semibold text-white">Silver</td><td class="px-4 py-5 font-semibold text-white">50€</td>
-                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5">Specific situations</td><td class="px-4 py-5"><span class="text-zinc-400 font-mono text-[10px] tracking-wider uppercase">Minimal</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td>
-                </tr>
-                <tr>
-                  <td class="px-4 py-5 font-display font-semibold text-white">Bronze</td><td class="px-4 py-5 font-semibold text-white">25€</td>
-                  <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] tracking-wider uppercase">Included</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5">Specific situations</td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td><td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] tracking-wider uppercase">—</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  .sponsorship-scroll::-webkit-scrollbar {
+    height: 3px;
+  }
 
-          <!-- Mobile-friendly sponsorship cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:hidden">
-            <article class="pg-card rounded-xl p-4 border border-gold/40">
-              <div class="flex items-start justify-between gap-3 mb-3">
-                <div><p class="font-mono text-[10px] tracking-[0.18em] text-gold uppercase">01 / Highest tier</p><h3 class="font-display font-bold text-lg text-gold mt-1">Title Partner</h3></div>
-                <p class="font-display font-bold text-xl text-white whitespace-nowrap">250€</p>
-              </div>
-              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
-              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
-                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
-                <p>Social media <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Stand <span class="text-gold text-[10px] uppercase tracking-wide">Main</span></p>
-                <p>Uniform <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Bottles <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
-              </div>
-            </article>
-            <article class="pg-card rounded-xl p-4">
-              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">02 / Premium</p><h3 class="font-display font-bold text-lg text-white mt-1">Platinum</h3></div><p class="font-display font-bold text-xl text-white">150€</p></div>
-              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
-              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
-                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
-                <p>Social media <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Stand <span class="text-gold text-[10px] uppercase tracking-wide">Highlight</span></p>
-                <p>Uniform <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Bottles <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
-              </div>
-            </article>
-            <article class="pg-card rounded-xl p-4">
-              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">03 / Partner</p><h3 class="font-display font-bold text-lg text-white mt-1">Gold</h3></div><p class="font-display font-bold text-xl text-white">100€</p></div>
-              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
-              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
-                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p>
-                <p>Social media <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Stand <span class="text-zinc-300 text-[10px] uppercase tracking-wide">Medium</span></p>
-                <p>Uniform <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>Bottles <span class="text-zinc-400 text-[10px] uppercase tracking-wide">Minimal</span></p>
-              </div>
-            </article>
-            <article class="pg-card rounded-xl p-4">
-              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">04 / Supporter</p><h3 class="font-display font-bold text-lg text-white mt-1">Silver</h3></div><p class="font-display font-bold text-xl text-white">50€</p></div>
-              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
-              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
-                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
-                <p>Social media <span class="text-zinc-400 text-[10px] uppercase tracking-wide">By arrangement</span></p><p>Stand <span class="text-zinc-400 text-[10px] uppercase tracking-wide">Minimal</span></p>
-                <p>Uniform <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p><p>Bottles <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
-              </div>
-            </article>
-            <article class="pg-card rounded-xl p-4">
-              <div class="flex items-start justify-between gap-3 mb-3"><div><p class="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">05 / Supporter</p><h3 class="font-display font-bold text-lg text-white mt-1">Bronze</h3></div><p class="font-display font-bold text-xl text-white">25€</p></div>
-              <p class="text-[11px] text-zinc-500 uppercase tracking-wider mb-2">Minimum contribution</p>
-              <div class="grid grid-cols-2 gap-x-3 gap-y-2 text-xs text-zinc-300">
-                <p>Website <span class="text-gold text-[10px] uppercase tracking-wide">Included</span></p><p>School events <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
-                <p>Social media <span class="text-zinc-400 text-[10px] uppercase tracking-wide">By arrangement</span></p><p>Stand <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
-                <p>Uniform <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p><p>Bottles <span class="text-zinc-600 text-[10px] uppercase tracking-wide">Not included</span></p>
-              </div>
-            </article>
-          </div>
-          <p class="text-[11px] text-zinc-500 mt-4 leading-relaxed">
-            Social media visibility for Silver and Bronze partners is provided only in specific situations. Benefits and placements are subject to the team's communication and event planning.
-          </p>
-        </div>
-      </div>
-    </section>
+  .sponsorship-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sponsorship-scroll::-webkit-scrollbar-thumb {
+    background: #b89b55;
+    border-radius: 10px;
+  }
+
+  .sponsorship-scroll::-webkit-scrollbar-thumb:hover {
+    background: #d4b66a;
+  }
+</style>
+
+<div class="reveal">
+  <div class="flex items-center gap-4 mb-6">
+    <span class="font-mono text-xs tracking-[0.22em] text-gold uppercase">
+      SPONSORSHIP PROPOSAL
+    </span>
+    <div class="h-px flex-1 bg-gold/25"></div>
+  </div>
+
+  <p class="text-sm text-zinc-400 leading-relaxed max-w-3xl mb-6">
+    Partnership levels and benefits are structured according to the minimum contribution. Higher levels receive greater brand visibility across the team's communication, events and equipment.
+  </p>
+
+  <!-- Responsive sponsorship comparison table -->
+  <div class="sponsorship-scroll rounded-xl border border-white/10">
+
+    <table class="w-full min-w-[1050px] text-left border-collapse">
+
+      <thead class="bg-white/[0.04]">
+        <tr class="font-mono text-[10px] tracking-[0.13em] text-gold uppercase">
+          <th class="px-4 py-4 border-b border-white/10">Category</th>
+          <th class="px-4 py-4 border-b border-white/10">Minimum contribution</th>
+          <th class="px-4 py-4 border-b border-white/10">Website</th>
+          <th class="px-4 py-4 border-b border-white/10">School events</th>
+          <th class="px-4 py-4 border-b border-white/10">Social media</th>
+          <th class="px-4 py-4 border-b border-white/10">Stand logo</th>
+          <th class="px-4 py-4 border-b border-white/10">Uniform</th>
+          <th class="px-4 py-4 border-b border-white/10">Bottles</th>
+        </tr>
+      </thead>
+
+      <tbody class="text-sm text-zinc-300">
+
+        <!-- Powerful -->
+        <tr class="border-b border-white/10 bg-gold/[0.035]">
+          <td class="px-4 py-5 font-display font-semibold text-gold">Powerful</td>
+          <td class="px-4 py-5 font-semibold text-white">250€</td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Main highlight</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+        </tr>
+
+        <!-- Platinum -->
+        <tr class="border-b border-white/10">
+          <td class="px-4 py-5 font-display font-semibold text-white">Platinum</td>
+          <td class="px-4 py-5 font-semibold text-white">150€</td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Highlight</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+        </tr>
+
+        <!-- Gold -->
+        <tr class="border-b border-white/10">
+          <td class="px-4 py-5 font-display font-semibold text-white">Gold</td>
+          <td class="px-4 py-5 font-semibold text-white">100€</td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-300 font-mono text-[10px] uppercase">Medium</span></td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-400 font-mono text-[10px] uppercase">Minimal</span></td>
+        </tr>
+
+        <!-- Silver -->
+        <tr class="border-b border-white/10">
+          <td class="px-4 py-5 font-display font-semibold text-white">Silver</td>
+          <td class="px-4 py-5 font-semibold text-white">50€</td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+          <td class="px-4 py-5">Specific situations</td>
+          <td class="px-4 py-5"><span class="text-zinc-400 font-mono text-[10px] uppercase">Minimal</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+        </tr>
+
+        <!-- Bronze -->
+        <tr>
+          <td class="px-4 py-5 font-display font-semibold text-white">Bronze</td>
+          <td class="px-4 py-5 font-semibold text-white">25€</td>
+          <td class="px-4 py-5"><span class="text-gold font-mono text-[10px] uppercase">Included</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+          <td class="px-4 py-5">Specific situations</td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+          <td class="px-4 py-5"><span class="text-zinc-600 font-mono text-[10px] uppercase">—</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="text-[11px] text-zinc-500 mt-4 leading-relaxed">
+    Social media visibility for Silver and Bronze partners is provided only in specific situations. Benefits and placements are subject to the team's communication and event planning.
+  </p>
+</div>
+</div>
+</section>
+
 
     <div class="gold-line"></div>
 
