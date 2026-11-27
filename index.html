@@ -1293,16 +1293,16 @@ POWERGRIPTEAM
                 <h3 class="font-display font-bold text-2xl text-white mt-1">Send a Direct Message</h3>
               </div>
 
-              <form id="contact-form" class="space-y-5" onsubmit="handleContactSubmit(event)">
+              <form id="contact-form" class="space-y-5" action="https://formspree.io/f/myewakzl" method="POST" onsubmit="handleContactSubmit(event)">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label for="sender-name" class="block font-mono text-[11px] text-zinc-400 uppercase mb-2">Full Name *</label>
-                    <input type="text" id="sender-name" required placeholder="Your name"
+                    <input type="text" id="sender-name" name="name" required placeholder="Your name"
                       class="w-full px-4 py-3 rounded-lg bg-obsidian border border-white/15 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-gold transition-colors" />
                   </div>
                   <div>
                     <label for="sender-email" class="block font-mono text-[11px] text-zinc-400 uppercase mb-2">Email Address *</label>
-                    <input type="email" id="sender-email" required placeholder="name@organization.com"
+                    <input type="email" id="sender-email" name="email" required placeholder="name@organization.com"
                       class="w-full px-4 py-3 rounded-lg bg-obsidian border border-white/15 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-gold transition-colors" />
                   </div>
                 </div>
@@ -1310,12 +1310,12 @@ POWERGRIPTEAM
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label for="sender-org" class="block font-mono text-[11px] text-zinc-400 uppercase mb-2">Company / Organization</label>
-                    <input type="text" id="sender-org" placeholder="Optional"
+                    <input type="text" id="sender-org" name="organization" placeholder="Optional"
                       class="w-full px-4 py-3 rounded-lg bg-obsidian border border-white/15 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-gold transition-colors" />
                   </div>
                   <div>
                     <label for="inquiry-type" class="block font-mono text-[11px] text-zinc-400 uppercase mb-2">Subject *</label>
-                    <select id="inquiry-type"
+                    <select id="inquiry-type" name="subject" required
                       class="w-full px-4 py-3 rounded-lg bg-obsidian border border-white/15 text-white text-sm focus:outline-none focus:border-gold transition-colors">
                       <option value="Sponsorship Partnership">Sponsorship & Partnership</option>
                       <option value="Technical Collaboration">Technical Collaboration</option>
@@ -1328,7 +1328,7 @@ POWERGRIPTEAM
 
                 <div>
                   <label for="sender-message" class="block font-mono text-[11px] text-zinc-400 uppercase mb-2">Message *</label>
-                  <textarea id="sender-message" rows="4" required placeholder="Tell us how we can collaborate..."
+                  <textarea id="sender-message" name="message" rows="4" required placeholder="Tell us how we can collaborate..."
                     class="w-full px-4 py-3 rounded-lg bg-obsidian border border-white/15 text-white text-sm placeholder-zinc-600 focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
                 </div>
 
@@ -1608,15 +1608,41 @@ POWERGRIPTEAM
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Contact Form Submission Handler
-    function handleContactSubmit(event) {
+    // Contact Form Submission Handler — Formspree
+    async function handleContactSubmit(event) {
       event.preventDefault();
+      const form = event.target;
       const feedback = document.getElementById('form-feedback');
+      const submitButton = form.querySelector('button[type="submit"]');
+      const submitLabel = submitButton.querySelector('span');
+
       feedback.classList.remove('hidden');
-      event.target.reset();
-      setTimeout(() => {
-        feedback.classList.add('hidden');
-      }, 6000);
+      feedback.textContent = 'Sending your message...';
+      submitButton.disabled = true;
+      submitLabel.textContent = 'SENDING...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Form submission failed');
+
+        feedback.textContent = 'Thank you. Your message has been sent successfully to the Power Grip Team.';
+        feedback.classList.remove('text-red-400', 'border-red-500/40');
+        feedback.classList.add('text-gold-light');
+        form.reset();
+      } catch (error) {
+        feedback.textContent = 'Something went wrong. Please try again or contact us by email.';
+        feedback.classList.remove('text-gold-light');
+        feedback.classList.add('text-red-400', 'border-red-500/40');
+      } finally {
+        submitButton.disabled = false;
+        submitLabel.textContent = 'TRANSMIT MESSAGE';
+        setTimeout(() => feedback.classList.add('hidden'), 7000);
+      }
     }
   </script>
 </body>
